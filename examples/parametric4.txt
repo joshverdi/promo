@@ -1,0 +1,9 @@
+#define d1 94.74 /* divergence angle 1 */
+#define d2 132.63 /* divergence angle 2 */
+#define a 18.95 /* branching angle */
+#define lr 1.109 /* elongation rate */
+#define vr 1.732 /* width increase rate */
+w:!(1)F(200)/(45)A
+A:*->!(vr)F(50)[&(a)F(50)A]/(d1)[&(a)F(50)A]/(d2)[&(a)F(50)A]
+F(l):*->F((l*lr))
+!(w):*->!((w*vr))

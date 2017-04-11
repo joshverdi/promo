@@ -1,0 +1,7 @@
+#word alpha
+#word bravo
+#ignore +,-
+n:1
+d:20
+w:bravo[+alpha]alpha[-alpha]alpha[+alpha]alpha 
+bravo<alpha->bravo

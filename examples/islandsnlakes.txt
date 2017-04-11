@@ -1,0 +1,6 @@
+n:	2
+w:	F+F+F+F
+p:	
+F->F+g-FF+F+FF+Fg+FF-g+FF-F-FF-Fg-FFF
+g->gggggg
+	

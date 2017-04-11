@@ -1,0 +1,13 @@
+#word alpha
+#word bravo
+#word fox
+#define r1 0.9 /* contraction ratio 1 */
+#define r2 0.7 /* contraction ratio 2 */
+#define a1 10 /* branching angle 1 */
+#define a2 60 /* branching angle 2 */
+#define wr 0.707 /* width decrease rate */
+n:10
+w:alpha(1,10)
+p:
+alpha(l,w):*->!(w)fox(l)[&(a1)bravo((l*r1),(w*wr))]/(180)[&(a2)bravo((l*r2),(w*wr))]
+bravo(l,w):*->!(w)fox(l)[+(a1)$bravo((l*r1),(w*wr))][-(a2)$bravo((l*r2),(w*wr))]

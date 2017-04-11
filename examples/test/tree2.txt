@@ -1,0 +1,10 @@
+#define r1 0.85
+#define r2 0.75
+#define a1 25
+#define a2 45
+#define a3 137
+n:6
+w:F(1)A(1)
+p:
+!(x)->!(x+1)
+A(s)->[/(a3)&(a1)!(1)F(r1*s)A(r1*s)]\(a2)&(a1)!(1)F(s*r2)A(r2)

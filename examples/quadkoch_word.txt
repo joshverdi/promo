@@ -1,0 +1,3 @@
+#word fox
+w:fox-fox-fox-fox
+fox->fox-fox+fox+foxfox-fox-fox+fox

@@ -1,0 +1,11 @@
+#define TROPISM_ANGLE -20
+#define r1 0.8
+#define r2 0.9
+#define a1 30
+#define a3 10
+
+n:10
+w:A(1,0.6)
+p:
+A(s,x)->S(s,x)[+(a1)/(137)A(s*r1,x*r1)][-(a3)/(-90)A(s*r2,x*r2)]
+S(s,x)->+(TROPISM_ANGLE)!(x)F(s)

@@ -1,0 +1,4 @@
+n:1
+d:10
+w:ABC[DE][SG[HI[JK]L]MNO]
+BC<S>G[H]M->AA

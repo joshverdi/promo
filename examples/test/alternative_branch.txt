@@ -1,0 +1,17 @@
+#define x 1 /* apical delay */
+#define y 1.24 /* Internode elongation */
+#define u 48
+#define v 36
+#define w 0.3
+
+n:5
+d:40
+w:A(0)
+p:
+A(d):(d>1)->A((d-1))
+A(d):(d<=1)->F(1)[/(v)+(u)A(x)][/(v)B(x)][^(u)A(x)]F(1)B(w)
+B(d):(d>1)->B((d-1))
+B(d):(d<=1)->F(1)[\(v)-(u)B(x)][\(v)A(x)][&(u)B(x)]F(1)A(w)
+F(a):*->F((a*y))
+
+

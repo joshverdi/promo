@@ -1,0 +1,15 @@
+#ignore +,-,F
+n:20
+d:22.5
+w:FAFAFA
+B<B>B -> B
+B<B>A -> A[+FAFA]
+B<A>B -> A
+B<A>A -> A
+A<B>B -> B
+A<B>A -> AFA
+A<A>B -> B
+A<A>A -> B
++->-
+-->+
+

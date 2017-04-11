@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AboutDialog</class>
+ <widget class="QDialog" name="AboutDialog">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>240</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>About Promo</string>
+  </property>
+  <widget class="QPushButton" name="pushButtonOk">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>200</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ok</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelCopyright">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>10</y>
+     <width>251</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Copyright © 2013 École de technologie supérieure. </string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDescription">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>130</y>
+     <width>231</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Promo is a procedural modeling tool used for research purposes inside the multimedia laboratory of École de technologie supérieure.</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelLogo">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>40</y>
+     <width>201</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>images/ets_logo.png</pixmap>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

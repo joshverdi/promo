@@ -1,0 +1,16 @@
+#ignore +,-,F
+n:24
+d:25.75
+w:FBFAFA
+B<B>B -> A
+B<B>A -> B
+B<A>B -> B
+B<A>A -> AFA
+A<B>B -> A
+A<B>A -> A[+FAFA]
+A<A>B -> A
+A<A>A -> B
++->-
+-->+
+
+

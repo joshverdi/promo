@@ -1,0 +1,10 @@
+#define r1 0.8
+#define r2 0.9
+#define a1 20
+#define a2 30
+#define wr 0.707
+n:10
+w:!(10)F(1.5)A(1,10)
+p:
+.50 A(s,x)->/(137)[+(a1)!(x)F(s)A(s*r1,x*wr)]-(a2)!(x)F(s)A(s*r2, x*wr)
+.50 A(s,x)->/(137)-(a2)!(x)F(s)A(s*r2,x*wr)

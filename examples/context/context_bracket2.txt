@@ -1,0 +1,4 @@
+n:1
+d:10
+w:ABCSG[H]MNO
+BC<S>G[H]M->AA

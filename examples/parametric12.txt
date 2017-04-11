@@ -1,0 +1,14 @@
+#define IRATE 1.025
+#define SRATE 1.02
+
+n:4
+d:40
+w:A(1)
+p:
+A(z):*->A((0.1*z))[&(5)G(1)M(1)]F(0.2)/(137.5)A(z)
+M(s):(s<3)->M((s*SRATE))
+G(s):(s<3)->G((s*SRATE))
+&(s):(s<15)->&((s*SRATE))
+F(i):(i<1)->F((i*IRATE))
+
+

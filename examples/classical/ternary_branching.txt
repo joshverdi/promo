@@ -1,0 +1,11 @@
+#define d1 94.74 /* contraction ratio 1 */
+#define d2 132.63 /* contraction ratio 2 */
+#define a 18.95 /* branching angle 1 */
+#define lr 1.109 /* elongation rate */
+#define vr 1.732 /* width decrease rate */
+n:5
+w:!(1)F(2)/(45)A(1)
+p:
+A(x):*->!(vr)F(0.5)[&(a)F(0.5)A(x)]/(d1)[&(a)F(0.5)A(x)]/(d2)[&(a)F(0.5)A(x)]
+F(l):*->F((l*lr))
+!(w):*->!((w*vr))

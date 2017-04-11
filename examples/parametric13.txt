@@ -1,0 +1,8 @@
+#define x 22
+#define y 30
+
+n:4
+d:22
+w:F(1)
+p:
+F(u):*->F((0.9*u))-(y)[G(0.5)-(x)F(u)+(x)F(u)+(x)F(u)+(x)F(u)]+(x)[G(0.5)+(x)F(u)-(x)F(u)-(x)F(u)]&(y)[G(0.5)-(x)F(u)+(x)F(u)+(x)F(u)+(x)F(u)]^(y)[G(0.5)-(x)F(u)+(x)F(u)+(x)F(u)+(x)F(u)]

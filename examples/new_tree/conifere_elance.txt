@@ -1,0 +1,14 @@
+#define r 0.9 /* contraction ratio 1 */
+#define a1 25 /* branching angle 1 */
+#define a2 35 /* branching angle 2 */
+#define a3 137 /* branching angle 3 */
+#define wr 0.707 /* width decrease rate */
+n:10
+w:F(0.5)A(1,1)
+p:
+A(l,w)->D(l*r,w*wr)D(l*r,w*wr)!(w)D(l*r,w*wr)!(w)A(l*r,w*wr)
+D(l,w)->F(l)[&(a2)!(w)B(l*r,w*wr)]/(a3)[&(a2)!(w)B(l*r,w*wr)]/(a3)
+B(l,w)->F(l)[-(a1)!(w)$C(l*r,w*wr)]!(w)C(l*r,w*wr)
+C(l,w)->F(l)[+(a1)!(w)$B(l*r,w*wr)]!(w)B(l*r,,w*wr)
+
+

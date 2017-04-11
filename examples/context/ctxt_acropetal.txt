@@ -1,0 +1,5 @@
+#ignore +,-
+n:1
+d:20
+w:B[+A]A[-A]A[+A]A 
+B<A->B

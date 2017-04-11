@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1028</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>516</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Procedural Modeling</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="45,30,0">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayoutViewer">
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <property name="bottomMargin">
+         <number>12</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="labelPreproc">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Preprocessing :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEditPreproc">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOn</enum>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QTextEdit::NoWrap</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelAxiom">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Axiom :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditAxiom">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRules">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Production Rules :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEditProduction">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOn</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QTextEdit::NoWrap</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayoutAngle">
+          <item>
+           <widget class="QLabel" name="labelAngle">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Angle :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBoxAngle">
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>360</number>
+            </property>
+            <property name="value">
+             <number>90</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelDepth">
+            <property name="maximumSize">
+             <size>
+              <width>45</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Depth :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBoxDepth">
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+         <widget class="QPushButton" name="pushButtonUpdate">
+          <property name="minimumSize">
+           <size>
+            <width>130</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="currentIndex">
+         <number>3</number>
+        </property>
+        <widget class="QWidget" name="tabConfig">
+         <attribute name="title">
+          <string>Configuration</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayoutConfig">
+            <item>
+             <widget class="QGroupBox" name="groupBoxRayComputing">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>Ray Computation Method</string>
+              </property>
+              <widget class="QRadioButton" name="radioButtonConstantRay">
+               <property name="geometry">
+                <rect>
+                 <x>150</x>
+                 <y>20</y>
+                 <width>100</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Constant Ray</string>
+               </property>
+              </widget>
+              <widget class="QRadioButton" name="radioButtonRecursiveRay">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>20</y>
+                 <width>141</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>Self-Regulated Ray</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelConfig">
+              <property name="text">
+               <string>Configuration File :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEditConfigFile"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonConfigBrowse">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>30</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="textEditConfigContent">
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOn</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayoutConfigUpdate" stretch="50,50,0">
+              <item>
+               <widget class="QPushButton" name="pushButtonResetConfig">
+                <property name="minimumSize">
+                 <size>
+                  <width>130</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Reset</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButtonSaveConfig">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Save</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayoutConfigFile">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetFixedSize</enum>
+                </property>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayoutColorConfig" stretch="0,75,25">
+              <item>
+               <widget class="QComboBox" name="comboBoxAlphabet"/>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBoxlineEditShape"/>
+              </item>
+              <item>
+               <widget class="QWidget" name="widgetColor" native="true"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabEdit">
+         <attribute name="title">
+          <string>Editing Tools</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="labelCurrentSelection">
+            <property name="text">
+             <string>Current Selection:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutCurrentSelection">
+            <item>
+             <widget class="QLineEdit" name="lineEditCurrentSelection"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelReplacementRules">
+            <property name="text">
+             <string>Replacement Rules:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutActions" stretch="30,70">
+            <item>
+             <widget class="QLabel" name="labelActions">
+              <property name="text">
+               <string>Actions:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBoxActions">
+              <item>
+               <property name="text">
+                <string>Delete</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Generate</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Regenerate</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutStages">
+            <item>
+             <widget class="QLabel" name="labelBackStage">
+              <property name="text">
+               <string>Back Stages:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxBackStage"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelForwardStages">
+              <property name="text">
+               <string>Forward:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxForwardStage"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutGenButtons">
+            <item>
+             <widget class="QPushButton" name="pushButtonApply">
+              <property name="text">
+               <string>Apply</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableView" name="tableViewConstVal"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelConstantScope">
+            <property name="text">
+             <string>Constants Scope :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutConstant1" stretch="50,0,50,0">
+            <item>
+             <widget class="QPushButton" name="pushButtonConstGlobalScope">
+              <property name="text">
+               <string>Whole</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonReinitialize">
+              <property name="text">
+               <string>Reinit</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonConstLocalScope">
+              <property name="text">
+               <string>Current</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonConstChildScope">
+              <property name="text">
+               <string>Sub</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutConstant">
+            <item>
+             <widget class="QLabel" name="labelConstant">
+              <property name="text">
+               <string>Constants:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBoxConst"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelConstValue">
+              <property name="text">
+               <string>Value:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="doubleSpinBoxConstValue">
+              <property name="decimals">
+               <number>3</number>
+              </property>
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1000.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.005000000000000</double>
+              </property>
+              <property name="value">
+               <double>0.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabMetrics">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="title">
+          <string>Metrics</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayoutMetrics" stretch="48,52">
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>10</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="title">
+               <string>Oriented Bounding Box</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayoutGb">
+                 <property name="leftMargin">
+                  <number>10</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>2</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonObbCurr">
+                   <property name="text">
+                    <string>Apply on Current</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonObbSub">
+                   <property name="text">
+                    <string>Apply on Sub-Branches</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonObbAll">
+                   <property name="text">
+                    <string>Whole Object Bounding</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonSimConst">
+                   <property name="text">
+                    <string>Simul. Constants</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButtonExtremSim">
+                   <property name="text">
+                    <string>Extrem Simulation</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelOutputRes">
+                   <property name="text">
+                    <string>Output Saved Image Resolution :</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBoxImgFormat">
+                   <item>
+                    <property name="text">
+                     <string>600x400</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>1024x768</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>1200x780</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableView" name="tableViewMetric"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabQlfr">
+         <attribute name="title">
+          <string>Autogeneration</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QPushButton" name="pushButtonAllSlt">
+              <property name="text">
+               <string>Select tout</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonDisplayQlfr">
+              <property name="text">
+               <string>Display qlfr</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutSmartSelection">
+            <item>
+             <widget class="QSlider" name="horizontalSliderSmartSelection">
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>50</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxSmartSelection">
+              <property name="value">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QComboBox" name="comboBoxTargetQualifier"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonApplyQualifier">
+              <property name="text">
+               <string>Apply Qlfr</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>276</width>
+               <height>301</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_2">
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_text3">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLabel" name="label_pic2">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="label_pic7">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLabel" name="label_pic4">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="1">
+                 <widget class="QLabel" name="label_pic10">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_pic3">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="11" column="1">
+                 <widget class="QLabel" name="label_pic12">
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_pic1">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QLabel" name="label_pic8">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="10" column="0">
+                 <widget class="QLabel" name="label_text9">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QLabel" name="label_text7">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLabel" name="label_text2">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QLabel" name="label_text5">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_pic5">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLabel" name="label_pic6">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QLabel" name="label_text4">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_text1">
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="0">
+                 <widget class="QLabel" name="label_pic9">
+                  <property name="maximumSize">
+                   <size>
+                    <width>135</width>
+                    <height>135</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="1">
+                 <widget class="QLabel" name="label_text6">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="1">
+                 <widget class="QLabel" name="label_text8">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="10" column="1">
+                 <widget class="QLabel" name="label_text10">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="11" column="0">
+                 <widget class="QLabel" name="label_pic11">
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="12" column="0">
+                 <widget class="QLabel" name="label_text11">
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item row="12" column="1">
+                 <widget class="QLabel" name="label_text12">
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1028</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad"/>
+    <addaction name="actionExit"/>
+    <addaction name="actionExecute"/>
+    <addaction name="actionVRender"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_Promo"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionHistoric"/>
+    <addaction name="actionOutput"/>
+    <addaction name="actionDerivation_Tree"/>
+    <addaction name="actionPCA_Plot"/>
+    <addaction name="actionOutput_Img_Browser"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionReset"/>
+    <addaction name="actionLoad_Camera"/>
+    <addaction name="actionSave_Camera"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_Selection"/>
+    <addaction name="actionLoad_Selection"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuVIew">
+    <property name="title">
+     <string>VIew</string>
+    </property>
+    <addaction name="actionBackground_Color"/>
+    <addaction name="actionShow_Hide_Gizmo"/>
+    <addaction name="actionShow_Hide_Grid"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuVIew"/>
+   <addaction name="menuTools"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNewProject">
+   <property name="text">
+    <string>New Project</string>
+   </property>
+  </action>
+  <action name="actionAbout_Promo">
+   <property name="text">
+    <string>About Promo</string>
+   </property>
+  </action>
+  <action name="actionOpen_Project">
+   <property name="text">
+    <string>Open Project</string>
+   </property>
+  </action>
+  <action name="actionSave_Project">
+   <property name="text">
+    <string>Save Project</string>
+   </property>
+  </action>
+  <action name="actionHistoric">
+   <property name="text">
+    <string>Save Historic</string>
+   </property>
+  </action>
+  <action name="actionOutput">
+   <property name="text">
+    <string>Display Output</string>
+   </property>
+  </action>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </action>
+  <action name="actionDerivation_Tree">
+   <property name="text">
+    <string>Derivation Tree</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionPCA_Plot">
+   <property name="text">
+    <string>PCA Plot</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionOutput_Img_Browser">
+   <property name="text">
+    <string>Images Grouping Tools</string>
+   </property>
+  </action>
+  <action name="actionExecute">
+   <property name="text">
+    <string>Execute</string>
+   </property>
+  </action>
+  <action name="actionSave_Camera">
+   <property name="text">
+    <string>Save Camera</string>
+   </property>
+  </action>
+  <action name="actionLoad_Camera">
+   <property name="text">
+    <string>Load Camera</string>
+   </property>
+  </action>
+  <action name="actionSave_Selection">
+   <property name="text">
+    <string>Save Selection</string>
+   </property>
+  </action>
+  <action name="actionLoad_Selection">
+   <property name="text">
+    <string>Load Selection</string>
+   </property>
+  </action>
+  <action name="actionVRender">
+   <property name="text">
+    <string>VRender</string>
+   </property>
+  </action>
+  <action name="actionBackground_Color">
+   <property name="text">
+    <string>Background Color</string>
+   </property>
+  </action>
+  <action name="actionShow_Hide_Gizmo">
+   <property name="text">
+    <string>Show/Hide Gizmo</string>
+   </property>
+  </action>
+  <action name="actionShow_Hide_Grid">
+   <property name="text">
+    <string>Show/Hide Grid</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
